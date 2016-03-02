@@ -50,37 +50,50 @@
 <body class="disable-default-action">
 
 
-	<div class="container" id="container">
-		<header>
-			<div class="app-icon cursor-pointer" alt="鬼畜输入法icon"></div>
-			<div class="app-name cursor-default">
-				<h4 class="cursor-default style-text-stoke">鬼畜输入法</h4>
-				<h4 class="clean-text">鬼畜输入法</h4>
-			</div>
-			<div class="style-center-text cursor-default app-slogan">黑科技，把文字转成视频</div>
-		</header>
+	<div class="container" id="slip">
+		<div class="page-view">
+			<div class="page page-1">
+				<header>
+					<div class="app-icon cursor-pointer" alt="鬼畜输入法icon"></div>
+					<div class="app-name cursor-default">
+						<h4 class="cursor-default style-text-stoke">鬼畜输入法</h4>
+						<h4 class="clean-text">鬼畜输入法</h4>
+					</div>
+					<div class="style-center-text cursor-default app-slogan">黑科技，把文字转成视频</div>
+				</header>
 
-		<main class="main">
-			<div class="style-center-text button cursor-pointer">
-				<a id="download">下载体验</a>
-			</div>
-		</main>
+				<main class="main">
+					<div class="style-center-text button cursor-pointer">
+						<a id="download">下载体验</a>
+					</div>
+				</main>
 
+			</div>
+
+			<div class="page page-2">aaa</div>
+		</div>
 	
 	</div>
 
+<script type="text/javascript" src="js/slip.min.js"></script>
 
     <script type="text/javascript">
 
     	// 为webapp增加监听事件
 		document.body.addEventListener('touchstart', function () { }); 
 
+		// 翻页时翻整页效果
+
+		var container = document.getElementById('slip');
+		var pages = document.querySelectorAll('.page');
+		var slip = Slip(container, 'y').webapp(pages);
+
 		// 链接地址
         var QQ_APP_STORE = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.blinnnk.zeus';
         var APP_STORE = 'https://itunes.apple.com/app/id1069287597';
         var APK_Download = 'http://7xpyw7.com2.z0.glb.qiniucdn.com/zeus-homepage20010.apk';
 
-
+        // 根据不同浏览器跳转不同下载地址
         var browser={
           versions:function(){
             var u = navigator.userAgent, app = navigator.appVersion;
