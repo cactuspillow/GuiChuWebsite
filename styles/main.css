@@ -104,28 +104,29 @@ header {
 	margin-top: 42px;
 }
 
-.button-touch {
-	width: 100%;
-	height: 100%;
+.button a{
 	background-color: #FFFF00;
 	border-radius: 100px;
-	font-weight: bold;
 
+	width: 100%;
 	height: 48px;
 	border-radius: 100px;
+
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	display: block;
+
+		text-decoration: none;
+	/*禁止显示touch选中效果*/
+    -webkit-tap-highlight-color: transparent;
 }
 
-.button-touch:active {
+.button a:active {
 	height: 50px;
 
 }
 
-.button-touch a{
-	text-decoration: none;
-	/*禁止显示touch选中效果*/
-    -webkit-tap-highlight-color: transparent;
-	color: #000;	
-}
 
 
 .cursor-default {
@@ -146,10 +147,6 @@ header {
 	font-weight: bolder;
 }
 
-.text-center {
-	width: 100%;
-	text-align: center;
-}
 
 
 
