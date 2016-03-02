@@ -1,0 +1,136 @@
+html,body{
+	font-family: "Microsoft YaHei", 'Helvetica', sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	background-color: rgb(144, 19, 254);
+}
+
+body.disable-default-action
+{
+    -webkit-touch-callout:none ;
+    -webkit-user-select:none ;
+    unselectable: IE/Opera, 
+	-moz-user-select: FireFox, 
+	onselectstart: IE/Safari, 
+	-webkit-user-select:Chrome
+}
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.app-icon {
+	margin: 0 auto;
+	margin-top: 30%;
+	width: 160px;
+	height: 160px;
+	border-radius: 25%;
+	background-image: url('../images/icon.png');
+	background-repeat: none;
+	background-size: 100% 100%;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7)
+}
+
+.app-icon:hover {
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+}
+
+.app-icon:active {
+	box-shadow: 0 3px 25px rgba(0, 0, 0, 0.7);
+}
+
+.app-name {
+	margin: 0 auto;
+	margin-top: 24px;
+	text-align: center;
+	position: relative;
+}
+
+.app-name h4 {
+	float: left;
+	margin: 0;
+	width: 100%;
+	font-size: 32px;
+	font-weight: 1000px;	
+}
+
+.clean-text {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+}
+
+.app-slogan {
+	margin: 0 auto;
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+.button {
+	margin: 0 auto;
+	margin-top: 40px;
+	width: 180px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius: 100px;
+	background-color: #28DF4B;
+	font-size: 18px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.button:active {
+	margin-top: 42px;
+}
+
+.button-touch-down-area {
+	width: 100%;
+	height: 100%;
+	background-color: #FFFF00;
+	border-radius: 100px;
+	font-weight: bold;
+
+	height: 48px;
+	border-radius: 100px;
+}
+
+.button-touch-down-area:active {
+	height: 50px;
+
+}
+
+.button-touch-down-area a{
+	text-decoration: none;
+	color: #000;	
+}
+
+
+.cursor-default {
+	cursor: default;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.style-text-stoke {
+	/*webkit*/
+	-webkit-text-stroke: 3px #FFF;
+	-webkit-text-fill-color: #000;
+}
+
+.text-border {
+	font-weight: bolder;
+}
+
+.text-center {
+	width: 100%;
+	text-align: center;
+}
+
