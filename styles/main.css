@@ -1,10 +1,7 @@
 html,body{
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'mini-standard-yuan', sans-serif;
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	height: 100%;
-	position: relative;
 	background-color: rgb(144, 19, 254);
 }
 
@@ -19,15 +16,14 @@ body.disable-default-action
 }
 
 .container {
+	position: absolute;
 	width: 100%;
-	position: relative;
-	overflow: hidden;
+	margin-top: 100px;
 }
 
 header {
 	float: left;
 	width: 100%;
-	margin-top: 30%;
 }
 
 .main {
@@ -48,7 +44,6 @@ header {
 
 .app-icon:hover {
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-	cursor: pointer;
 }
 
 .app-icon:active {
@@ -62,13 +57,24 @@ header {
 	position: relative;
 }
 
+/* .app-name {
+	margin: 0 auto;
+	margin-top: 24px;
+	height: 63px;
+	width: 198px;
+	background-image: url("../images/title.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+}
+ */
+
 .app-name h4 {
 	float: left;
 	margin: 0;
 	width: 100%;
 	font-size: 32px;
-	font-weight: 1000px;	
-}
+/* 	font-weight: 100px;	
+ */}
 
 .clean-text {
 	position: absolute;
@@ -151,6 +157,14 @@ header {
 	text-align: center;
 }
 
-
+/*自定义字体*/
+@font-face {
+ font-family: 'mini-standard-yuan';
+ src: url('../fonts/mini-standard-yuan.eot');
+ src: url('../fonts/mini-standard-yuan.eot?#iefix') format('mini-standard-yuan'),
+              url('../fonts/mini-standard-yuan.woff') format('woff'),
+              url('../fonts/mini-standard-yuan.ttf') format('truetype'),
+              url('../fonts/mini-standard-yuan.svg#mini-standard-yuan') format('svg');
+}
 
 

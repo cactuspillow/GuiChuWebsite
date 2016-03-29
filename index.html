@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
 <head>
@@ -13,9 +13,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- 设置webapp的icon -->
     <link rel="apple-touch-icon-precomposed" href="logo.png" />
+    <!-- 为safari添加商店跳转 -->
+    <meta name="apple-itunes-app" content ="app-id=1069287597">
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- 对于IE浏览器，使用最新的浏览器模式浏览内容。 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -43,6 +48,8 @@
 
     <!-- 引用mini js -->
     <script src="http://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <!-- 引用飘雪 -->
+    <script src="js/snowing.js"></script>
 
 </head>
 
@@ -50,9 +57,9 @@
 <body class="disable-default-action">
 
 
-	<div class="container" id="container">
+	<div class="container">
 		<header>
-			<div class="app-icon cursor-pointer" alt="鬼畜输入法icon"></div>
+			<div class="app-icon download cursor-pointer" alt="鬼畜输入法icon"></div>
 			<div class="app-name cursor-default">
 				<h4 class="cursor-default style-text-stoke">鬼畜输入法</h4>
 				<h4 class="clean-text">鬼畜输入法</h4>
@@ -61,9 +68,9 @@
 		</header>
 
 		<main class="main">
-			<div class="style-center-text button cursor-pointer">
+			<div class="style-center-text button download cursor-pointer">
 				<div class="button-touch">
-					<a class="text-center" id="download">下载体验</a>
+					<a class="text-center">下载体验</a>
 				</div>
 			</div>
 		</main>
@@ -105,7 +112,7 @@
          };
 
       
-        $("#download").click(function(e){
+        $(".download").click(function(e){
             
             if(typeof WeixinJSBridge !== "undefined"){
                window.location.href = QQ_APP_STORE;
@@ -122,6 +129,17 @@
             }
     
         });
+
+
+    $(function() {
+        $.fn.snow({
+                    
+                    minSize: 5, //雪花的最小尺寸
+                    maxSize: 10, //雪花的最大尺寸
+                    newOn: 600 //雪花出现的频率 这个数值越小雪花越多
+        });
+    });
+
 
     </script>
 </body>
